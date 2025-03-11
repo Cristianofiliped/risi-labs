@@ -51,17 +51,15 @@ export const ContactSection = () => {
               Open Source
             </div>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-            Access Our Research Models
-          </h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Access Our Models</h2>
           <p className="text-lg text-gray-600">
             Our research code and models are open source and available on GitHub. Explore our repositories to learn more about our work and contribute to improving diabetes management.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-5 gap-8 items-start">
+        <div className="">
           <div className="md:col-span-2 animate-fade-in">
-            <div className="glass-card p-8">
+            <div className="glass-card p-15 px-[60px]">
               <div className="flex justify-center mb-6">
                 <img alt="Glucose Control Research Logo" className="w-100 h-40 object-contain" src="/lovable-uploads/23927433-31b1-49a9-8796-a129decd130a.png" />
               </div>
