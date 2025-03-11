@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { cn } from "@/lib/utils";
-import { Search, Flask, TestTube } from "lucide-react";
+import { Search, Beaker, TestTube } from "lucide-react";
 
 const researchAreas = [
   {
@@ -11,7 +11,7 @@ const researchAreas = [
     details: "Our approach combines continuous glucose monitoring (CGM) data with semi-supervised machine learning to detect characteristic post-meal glucose patterns. This algorithm can identify approximately 70% of meals without user input, significantly reducing the burden of manual tracking."
   },
   {
-    icon: <Flask className="w-6 h-6" />,
+    icon: <Beaker className="w-6 h-6" />,
     title: "Nocturnal Hypoglycemia Forecasting",
     description: "We're creating predictive models to forecast nighttime low blood sugar events. This early warning system gives users time to take preventative action before dangerous hypoglycemic events occur.",
     details: "Using recurrent neural networks and time-series analysis, our nocturnal forecasting system analyzes patterns in daily glucose data, activity levels, insulin dosing, and nutritional intake to predict the likelihood of nighttime hypoglycemia with 85% accuracy up to 4 hours in advance."
