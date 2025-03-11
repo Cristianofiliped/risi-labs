@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Send, Mail, MapPin, Phone, Github } from "lucide-react";
@@ -66,7 +67,7 @@ export const ContactSection = () => {
           <div className="md:col-span-2 animate-fade-in">
             <div className="glass-card p-8">
               <div className="flex justify-center mb-6">
-                <img src="/glucose-logo.png" alt="Glucose Control Research Logo" className="w-40 h-40 object-contain" />
+                <img src="/lovable-uploads/ae4f3d70-008a-4521-9f02-9366ca6c8ba2.png" alt="Glucose Control Research Logo" className="w-40 h-40 object-contain" />
               </div>
               
               <h3 className="text-2xl font-bold mb-6 text-center">GitHub Repository</h3>

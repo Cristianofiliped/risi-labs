@@ -15,8 +15,12 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-8 md:mb-0">
             <div className="flex items-center">
-              <div className="w-10 h-10 bg-glucose-600 rounded-lg mr-2 flex items-center justify-center">
-                <span className="text-white font-bold">G</span>
+              <div className="mr-3">
+                <img 
+                  src="/lovable-uploads/ae4f3d70-008a-4521-9f02-9366ca6c8ba2.png" 
+                  alt="Glucose Control Research Logo" 
+                  className="w-12 h-12 object-contain" 
+                />
               </div>
               <div>
                 <h3 className="font-bold text-xl text-gray-900">Glucose Control Research</h3>

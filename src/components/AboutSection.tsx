@@ -15,7 +15,7 @@ export const AboutSection = () => {
             Transforming diabetes management through intelligent algorithms and data-driven insights
           </h2>
           <p className="text-lg text-gray-600">
-            Gluroo aims to simplify diabetes management by streamlining the tracking of fitness, nutrition, and insulin use for People with Diabetes (PWD). Our focus is on improving blood glucose level outcomes for the nearly 10 million people worldwide with Type 1 Diabetes.
+            Glucose Control Research collaborates with WAT.ai and Gluroo Imaginations Inc., but they are distinct entities. Our focus is on improving blood glucose level outcomes for the nearly 10 million people worldwide with Type 1 Diabetes through cutting-edge research and technology.
           </p>
         </div>
 
