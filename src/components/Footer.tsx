@@ -1,0 +1,80 @@
+
+import { ArrowUpIcon, Heart } from "lucide-react";
+
+export const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
+  return (
+    <footer className="bg-gray-50 border-t border-gray-200">
+      <div className="section-container py-12">
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="mb-8 md:mb-0">
+            <div className="flex items-center">
+              <div className="w-10 h-10 bg-glucose-600 rounded-lg mr-2 flex items-center justify-center">
+                <span className="text-white font-bold">G</span>
+              </div>
+              <div>
+                <h3 className="font-bold text-xl text-gray-900">Glucose Control Research</h3>
+                <p className="text-sm text-gray-600">Improving lives through intelligent diabetes management</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 sm:gap-16">
+            <div>
+              <h4 className="font-semibold text-gray-900 mb-3">Research</h4>
+              <ul className="space-y-2">
+                <li><a href="#research" className="text-gray-600 hover:text-glucose-600 text-sm">Our Approach</a></li>
+                <li><a href="#research" className="text-gray-600 hover:text-glucose-600 text-sm">Publications</a></li>
+                <li><a href="#about" className="text-gray-600 hover:text-glucose-600 text-sm">Technology</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="font-semibold text-gray-900 mb-3">Team</h4>
+              <ul className="space-y-2">
+                <li><a href="#team" className="text-gray-600 hover:text-glucose-600 text-sm">About Us</a></li>
+                <li><a href="#team" className="text-gray-600 hover:text-glucose-600 text-sm">Careers</a></li>
+                <li><a href="#contact" className="text-gray-600 hover:text-glucose-600 text-sm">Contact</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="font-semibold text-gray-900 mb-3">Legal</h4>
+              <ul className="space-y-2">
+                <li><a href="#" className="text-gray-600 hover:text-glucose-600 text-sm">Privacy Policy</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-glucose-600 text-sm">Terms of Use</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-glucose-600 text-sm">Cookies</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div className="mt-12 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-sm text-gray-600 mb-4 md:mb-0">
+            © {new Date().getFullYear()} Glucose Control Research. All rights reserved.
+          </p>
+          
+          <div className="flex items-center">
+            <button
+              onClick={scrollToTop}
+              className="p-2 bg-white rounded-full shadow-md hover:shadow-lg transition-shadow duration-300 mr-4"
+              aria-label="Scroll to top"
+            >
+              <ArrowUpIcon className="w-5 h-5 text-glucose-600" />
+            </button>
+            
+            <p className="text-sm text-gray-600 flex items-center">
+              Made with <Heart className="w-4 h-4 mx-1 text-glucose-600" /> for people with diabetes
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
