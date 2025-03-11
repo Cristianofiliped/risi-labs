@@ -90,7 +90,7 @@ export const ResearchSection = () => {
                       "w-32 h-32 rounded-full flex items-center justify-center transition-all duration-500",
                       activeTab === 1 ? "bg-glucose-200 scale-100" : "bg-glucose-100 scale-0"
                     )}>
-                      <Flask className={cn(
+                      <Beaker className={cn(
                         "transition-all duration-500",
                         activeTab === 1 ? "w-12 h-12 text-glucose-800 opacity-100" : "w-0 h-0 opacity-0"
                       )} />
