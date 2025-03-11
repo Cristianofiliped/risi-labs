@@ -1,7 +1,6 @@
-
 import { useState } from "react";
 import { cn } from "@/lib/utils";
-import { Send, Mail, MapPin, Phone, Twitter, Linkedin, Github } from "lucide-react";
+import { Send, Mail, MapPin, Phone, Github } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 export const ContactSection = () => {
@@ -52,30 +51,45 @@ export const ContactSection = () => {
         <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
           <div className="inline-block mb-4">
             <div className="bg-glucose-100 text-glucose-700 font-medium px-4 py-1 rounded-full text-sm">
-              Get In Touch
+              Open Source
             </div>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-            Contact Our Research Team
+            Access Our Research Models
           </h2>
           <p className="text-lg text-gray-600">
-            Have questions about our research? Interested in collaboration opportunities? We'd love to hear from you.
+            Our research code and models are open source and available on GitHub. Explore our repositories to learn more about our work and contribute to improving diabetes management.
           </p>
         </div>
 
         <div className="grid md:grid-cols-5 gap-8 items-start">
           <div className="md:col-span-2 animate-fade-in">
             <div className="glass-card p-8">
-              <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
+              <div className="flex justify-center mb-6">
+                <img src="/glucose-logo.png" alt="Glucose Control Research Logo" className="w-40 h-40 object-contain" />
+              </div>
+              
+              <h3 className="text-2xl font-bold mb-6 text-center">GitHub Repository</h3>
               
               <div className="space-y-6">
                 <div className="flex items-start">
                   <div className="mt-1 mr-4 p-2 bg-glucose-100 rounded-lg text-glucose-600">
-                    <MapPin size={20} />
+                    <Github size={20} />
                   </div>
                   <div>
-                    <h4 className="font-medium text-gray-900">Location</h4>
-                    <p className="text-gray-600">123 Innovation Drive, Research Park, CA 94305</p>
+                    <h4 className="font-medium text-gray-900">Find our code</h4>
+                    <p className="text-gray-600">All our models and research code are available on GitHub</p>
+                    <a 
+                      href="https://github.com/Blood-Glucose-Control" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-glucose-700 hover:text-glucose-800 font-medium inline-flex items-center mt-2"
+                    >
+                      Visit our GitHub
+                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                      </svg>
+                    </a>
                   </div>
                 </div>
                 
@@ -91,30 +105,22 @@ export const ContactSection = () => {
                 
                 <div className="flex items-start">
                   <div className="mt-1 mr-4 p-2 bg-glucose-100 rounded-lg text-glucose-600">
+                    <MapPin size={20} />
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-gray-900">Location</h4>
+                    <p className="text-gray-600">123 Innovation Drive, Research Park, CA 94305</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="mt-1 mr-4 p-2 bg-glucose-100 rounded-lg text-glucose-600">
                     <Phone size={20} />
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-900">Phone</h4>
                     <p className="text-gray-600">+1 (555) 123-4567</p>
                   </div>
-                </div>
-              </div>
-              
-              <div className="mt-8 pt-8 border-t">
-                <h4 className="font-medium text-gray-900 mb-4">Connect With Us</h4>
-                <p className="text-gray-600 mb-4">
-                  Follow our research updates and join the conversation on improving diabetes management through technology.
-                </p>
-                <div className="flex space-x-4">
-                  <a href="#" className="w-10 h-10 rounded-full bg-glucose-100 hover:bg-glucose-200 flex items-center justify-center transition-colors">
-                    <Twitter className="text-glucose-700" size={20} />
-                  </a>
-                  <a href="#" className="w-10 h-10 rounded-full bg-glucose-100 hover:bg-glucose-200 flex items-center justify-center transition-colors">
-                    <Linkedin className="text-glucose-700" size={20} />
-                  </a>
-                  <a href="#" className="w-10 h-10 rounded-full bg-glucose-100 hover:bg-glucose-200 flex items-center justify-center transition-colors">
-                    <Github className="text-glucose-700" size={20} />
-                  </a>
                 </div>
               </div>
             </div>

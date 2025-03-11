@@ -12,7 +12,7 @@ export const AboutSection = () => {
             </div>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-            Improving Lives Through Intelligent Diabetes Management
+            Transforming diabetes management through intelligent algorithms and data-driven insights
           </h2>
           <p className="text-lg text-gray-600">
             Gluroo aims to simplify diabetes management by streamlining the tracking of fitness, nutrition, and insulin use for People with Diabetes (PWD). Our focus is on improving blood glucose level outcomes for the nearly 10 million people worldwide with Type 1 Diabetes.

@@ -25,7 +25,7 @@ export const Footer = () => {
             </div>
           </div>
           
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 sm:gap-16">
+          <div className="grid grid-cols-2 gap-8 sm:gap-16">
             <div>
               <h4 className="font-semibold text-gray-900 mb-3">Research</h4>
               <ul className="space-y-2">
@@ -41,15 +41,6 @@ export const Footer = () => {
                 <li><a href="#team" className="text-gray-600 hover:text-glucose-600 text-sm">About Us</a></li>
                 <li><a href="#team" className="text-gray-600 hover:text-glucose-600 text-sm">Careers</a></li>
                 <li><a href="#contact" className="text-gray-600 hover:text-glucose-600 text-sm">Contact</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold text-gray-900 mb-3">Legal</h4>
-              <ul className="space-y-2">
-                <li><a href="#" className="text-gray-600 hover:text-glucose-600 text-sm">Privacy Policy</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-glucose-600 text-sm">Terms of Use</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-glucose-600 text-sm">Cookies</a></li>
               </ul>
             </div>
           </div>

@@ -1,26 +1,32 @@
 
 import { useState } from "react";
 import { cn } from "@/lib/utils";
-import { Search, Beaker, TestTube } from "lucide-react";
+import { Search, Beaker, TestTube, Activity } from "lucide-react";
 
 const researchAreas = [
   {
     icon: <Search className="w-6 h-6" />,
-    title: "Semi-Supervised Learning for Meal Detection",
-    description: "We're developing advanced algorithms to identify unlabelled meals in time-series blood glucose data. By recognizing patterns in glucose fluctuations, we can help users track nutrition without manual logging.",
+    title: "Automatic Meal Identification",
+    description: "This team focuses on the semi-supervised change point detection problem of identifying when meals occur from blood glucose concentration time series data.",
     details: "Our approach combines continuous glucose monitoring (CGM) data with semi-supervised machine learning to detect characteristic post-meal glucose patterns. This algorithm can identify approximately 70% of meals without user input, significantly reducing the burden of manual tracking."
   },
   {
     icon: <Beaker className="w-6 h-6" />,
-    title: "Nocturnal Hypoglycemia Forecasting",
-    description: "We're creating predictive models to forecast nighttime low blood sugar events. This early warning system gives users time to take preventative action before dangerous hypoglycemic events occur.",
+    title: "Nocturnal Hypoglycemic Probabilistic Forecasting",
+    description: "This team focuses on probabilistic forecasting of blood glucose concentrations when type 1 diabetics are sleeping to help predict when hypoglycemic events are likely to occur.",
     details: "Using recurrent neural networks and time-series analysis, our nocturnal forecasting system analyzes patterns in daily glucose data, activity levels, insulin dosing, and nutritional intake to predict the likelihood of nighttime hypoglycemia with 85% accuracy up to 4 hours in advance."
   },
   {
     icon: <TestTube className="w-6 h-6" />,
-    title: "Causal Machine Learning for Treatment Optimization",
-    description: "We're exploring causal inference techniques to understand the complex relationships between lifestyle factors, treatment decisions, and glucose outcomes for different user profiles.",
+    title: "Causal Blood Glucose Dynamics",
+    description: "This team focuses on developing causal models for better understanding of blood glucose dynamics.",
     details: "Our causal machine learning framework combines counterfactual reasoning with reinforcement learning to suggest personalized treatment adjustments. By understanding the causal relationships between actions and outcomes for different patient profiles, we can provide more effective, individualized recommendations."
+  },
+  {
+    icon: <Activity className="w-6 h-6" />,
+    title: "RL Insulin Pump",
+    description: "This team focuses on developing reinforcement learning models that operate basal-bolus controllers to maximize time in the range of type-1 diabetics.",
+    details: "Our reinforcement learning approach optimizes insulin delivery through adaptive basal rates and bolus recommendations. Through continuous learning from patient data, the system improves glycemic control by predicting optimal insulin dosing patterns tailored to individual metabolic responses."
   }
 ];
 
@@ -41,6 +47,9 @@ export const ResearchSection = () => {
           </h2>
           <p className="text-lg text-gray-600">
             We're developing innovative machine learning solutions to address the complex challenges of diabetes management and improve quality of life.
+          </p>
+          <p className="text-sm text-gray-500 mt-2">
+            Glucose Control Research collaborates with WAT.ai and Gluroo Imaginations Inc., but they are separate entities.
           </p>
         </div>
 
@@ -102,6 +111,15 @@ export const ResearchSection = () => {
                       <TestTube className={cn(
                         "transition-all duration-500",
                         activeTab === 2 ? "w-12 h-12 text-glucose-800 opacity-100" : "w-0 h-0 opacity-0"
+                      )} />
+                    </div>
+                    <div className={cn(
+                      "w-32 h-32 rounded-full flex items-center justify-center transition-all duration-500", 
+                      activeTab === 3 ? "bg-glucose-200 scale-100" : "bg-glucose-100 scale-0"
+                    )}>
+                      <Activity className={cn(
+                        "transition-all duration-500",
+                        activeTab === 3 ? "w-12 h-12 text-glucose-800 opacity-100" : "w-0 h-0 opacity-0"
                       )} />
                     </div>
                   </div>
