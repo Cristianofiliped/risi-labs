@@ -59,7 +59,7 @@ export const TeamSection = () => {
           animationDelay: `${0.1 * index}s`
         }}>
               <div className="aspect-square overflow-hidden">
-                <img src={member.image} alt={member.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900">{member.name}</h3>

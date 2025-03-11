@@ -1,6 +1,4 @@
-
 import { ArrowUpIcon, Heart } from "lucide-react";
-
 export const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({
@@ -8,9 +6,7 @@ export const Footer = () => {
       behavior: "smooth"
     });
   };
-
-  return (
-    <footer className="bg-gray-50 border-t border-gray-200">
+  return <footer className="bg-gray-50 border-t border-gray-200">
       <div className="section-container py-12">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-8 md:mb-0">
@@ -31,7 +27,7 @@ export const Footer = () => {
               <ul className="space-y-2">
                 <li><a href="#research" className="text-gray-600 hover:text-glucose-600 text-sm">Our Approach</a></li>
                 <li><a href="#research" className="text-gray-600 hover:text-glucose-600 text-sm">Publications</a></li>
-                <li><a href="#about" className="text-gray-600 hover:text-glucose-600 text-sm">Technology</a></li>
+                
               </ul>
             </div>
             
@@ -39,7 +35,7 @@ export const Footer = () => {
               <h4 className="font-semibold text-gray-900 mb-3">Team</h4>
               <ul className="space-y-2">
                 <li><a href="#team" className="text-gray-600 hover:text-glucose-600 text-sm">About Us</a></li>
-                <li><a href="#team" className="text-gray-600 hover:text-glucose-600 text-sm">Careers</a></li>
+                
                 <li><a href="#contact" className="text-gray-600 hover:text-glucose-600 text-sm">Contact</a></li>
               </ul>
             </div>
@@ -52,11 +48,7 @@ export const Footer = () => {
           </p>
           
           <div className="flex items-center">
-            <button
-              onClick={scrollToTop}
-              className="p-2 bg-white rounded-full shadow-md hover:shadow-lg transition-shadow duration-300 mr-4"
-              aria-label="Scroll to top"
-            >
+            <button onClick={scrollToTop} className="p-2 bg-white rounded-full shadow-md hover:shadow-lg transition-shadow duration-300 mr-4" aria-label="Scroll to top">
               <ArrowUpIcon className="w-5 h-5 text-glucose-600" />
             </button>
             
@@ -66,6 +58,5 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };

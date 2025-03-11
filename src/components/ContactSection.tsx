@@ -74,7 +74,7 @@ export const ContactSection = () => {
                     <Github size={20} />
                   </div>
                   <div>
-                    <h4 className="font-medium text-gray-900">Find our code</h4>
+                    <h4 className="font-medium text-gray-900">For more information</h4>
                     <p className="text-gray-600">All our models and research code are available on GitHub</p>
                     <a href="https://github.com/Blood-Glucose-Control" target="_blank" rel="noopener noreferrer" className="text-glucose-700 hover:text-glucose-800 font-medium inline-flex items-center mt-2">
                       Visit our GitHub
@@ -91,7 +91,7 @@ export const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-900">Email</h4>
-                    <p className="text-glucose-700">research@glucosecontrol.org</p>
+                    <p className="text-glucose-700">christopher.risi@uwaterloo.ca</p>
                   </div>
                 </div>
                 
@@ -101,19 +101,11 @@ export const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-900">Location</h4>
-                    <p className="text-gray-600">123 Innovation Drive, Research Park, CA 94305</p>
+                    <p className="text-gray-600">200 University Ave W, Waterloo, ON N2L 3G1</p>
                   </div>
                 </div>
                 
-                <div className="flex items-start">
-                  <div className="mt-1 mr-4 p-2 bg-glucose-100 rounded-lg text-glucose-600">
-                    <Phone size={20} />
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-gray-900">Phone</h4>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
-                  </div>
-                </div>
+                
               </div>
             </div>
           </div>
