@@ -24,7 +24,7 @@ const researchAreas = [{
 }];
 export const ResearchSection = () => {
   const [activeTab, setActiveTab] = useState(0);
-  return <section id="research" className="bg-gradient-to-b from-white to-glucose-50/30 py-20">
+  return <section id="research" className="bg-gradient-to-b from-white to-glucose-50/30 py-0">
       <div className="section-container">
         <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
           <div className="inline-block mb-4">
@@ -86,9 +86,9 @@ export const ResearchSection = () => {
 
         {/* Research Process */}
         <div className="animate-fade-in">
-          <h3 className="text-2xl font-bold mb-8 text-center">Our Research Process</h3>
+          
           <div className="relative">
-            <div className="absolute top-1/2 left-4 right-4 h-0.5 bg-glucose-200 transform -translate-y-1/2 hidden sm:block"></div>
+            
             <div className="grid sm:grid-cols-4 gap-4">
               {[{
               number: "01",
@@ -107,13 +107,7 @@ export const ResearchSection = () => {
               title: "Implementation",
               description: "Deploying solutions to improve patient outcomes"
             }].map((step, index) => <div key={index} className="relative">
-                  <div className="glass-card p-6 text-center relative z-10 h-full">
-                    <div className="w-10 h-10 rounded-full bg-glucose-500 text-white flex items-center justify-center mx-auto mb-4">
-                      {step.number}
-                    </div>
-                    <h4 className="font-semibold mb-2">{step.title}</h4>
-                    <p className="text-sm text-gray-600">{step.description}</p>
-                  </div>
+                  
                 </div>)}
             </div>
           </div>

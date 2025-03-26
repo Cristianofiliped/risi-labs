@@ -42,7 +42,7 @@ const teamMembers = [{
   }
 }];
 export const TeamSection = () => {
-  return <section id="team" className="bg-white py-20">
+  return <section id="team" className="bg-white py-0">
       <div className="section-container">
         <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
           <div className="inline-block mb-4">
