@@ -97,7 +97,7 @@ export const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-900">Location</h4>
-                    <p className="text-gray-600 py-0">200 University Ave W, Waterloo, ON N2L 3G1</p>
+                    <p className="text-gray-600 py-0">200 University Ave W, Waterloo, ON N2L 5Z5</p>
                   </div>
                 </div>
                 
