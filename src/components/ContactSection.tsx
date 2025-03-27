@@ -71,7 +71,7 @@ export const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-900">For more information</h4>
-                    <p className="text-gray-600">Our code and research are available below.</p>
+                    <p className="text-gray-600">Our code and research are available here: </p>
                     <a href="https://github.com/Blood-Glucose-Control" target="_blank" rel="noopener noreferrer" className="text-glucose-700 hover:text-glucose-800 font-medium inline-flex items-center mt-2">
                       Visit our GitHub
                       <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
