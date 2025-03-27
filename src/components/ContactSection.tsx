@@ -51,15 +51,13 @@ export const ContactSection = () => {
               Open Source
             </div>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Access Our Models</h2>
-          <p className="text-lg text-gray-600">
-            Our research code and models are open source and available on GitHub. Explore our repositories to learn more about our work and contribute to improving diabetes management.
-          </p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Access Our GitHub</h2>
+          <p className="text-lg text-gray-600">Our code and models are open source and available on GitHub. Explore our repositories to learn more about our work and contribute to improving diabetes management.</p>
         </div>
 
         <div className="">
           <div className="md:col-span-2 animate-fade-in">
-            <div className="glass-card p-15 px-[60px]">
+            <div className="glass-card p-15 px-[60px] py-[40px]">
               <div className="flex justify-center mb-6">
                 <img alt="Glucose Control Research Logo" className="w-100 h-40 object-contain" src="/lovable-uploads/23927433-31b1-49a9-8796-a129decd130a.png" />
               </div>
@@ -99,7 +97,7 @@ export const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-900">Location</h4>
-                    <p className="text-gray-600">200 University Ave W, Waterloo, ON N2L 3G1</p>
+                    <p className="text-gray-600 py-0">200 University Ave W, Waterloo, ON N2L 3G1</p>
                   </div>
                 </div>
                 
