@@ -16,7 +16,7 @@ export const Footer = () => {
               </div>
               <div>
                 <h3 className="font-bold text-xl text-gray-900">Risi Lab</h3>
-                <p className="text-sm text-gray-600">Improving lives through intelligent diabetes management</p>
+                <p className="text-sm text-gray-600">Simplifying Diabetes with Machine Learning</p>
               </div>
             </div>
           </div>
