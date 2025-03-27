@@ -1,15 +1,16 @@
+
 import { Activity, Brain, Database, HeartPulse } from "lucide-react";
 export const AboutSection = () => {
-  return <section id="about" className="bg-white py-0">
+  return <section id="about" className="bg-white py-12">
       <div className="section-container">
-        <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
+        <div className="max-w-3xl mx-auto text-center mb-12 animate-fade-in">
           <div className="inline-block mb-4">
             <div className="bg-glucose-50 text-glucose-700 font-medium px-4 py-1 rounded-full text-sm">
               Our Mission
             </div>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Actionable insights to People with Diabetes and their healthcare practitioners.</h2>
-          <p className="text-lg text-gray-600">Utilizing semi-supervised learning and causal machine-learning techniques, we aim to improve blood glucose level outcomes for people with Type 1 Diabetes to mitigate short-term risk and improving long-term quality of life. </p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Transforming diabetes management through intelligent algorithms and data-driven insights.</h2>
+          <p className="text-lg text-gray-600">Utilizing semi-supervised learning and causal machine-learning techniques, we aim to improve blood glucose level outcomes for people with Type 1 Diabetes to mitigate short-term risk and improving long-term quality of life.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

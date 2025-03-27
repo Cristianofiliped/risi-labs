@@ -1,90 +1,69 @@
+
 import { cn } from "@/lib/utils";
-import { Github, Linkedin, Twitter } from "lucide-react";
-const teamMembers = [{
-  name: "Dr. Sarah Chen",
-  role: "Lead Research Scientist",
-  bio: "PhD in Machine Learning with focus on healthcare applications. 10+ years of experience in diabetes research.",
-  image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&h=200&auto=format&fit=crop",
-  social: {
-    twitter: "#",
-    linkedin: "#",
-    github: "#"
+import { ArrowRight, Building2, Users } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+
+const collaborators = [
+  {
+    name: "WAT.ai",
+    description: "An organization focused on artificial intelligence research and applications in healthcare.",
+    icon: <Building2 className="w-12 h-12 text-glucose-600 mb-4" />
+  },
+  {
+    name: "Gluroo Imaginations Inc",
+    description: "A specialized healthcare technology company developing innovative solutions for diabetes management.",
+    icon: <Building2 className="w-12 h-12 text-glucose-600 mb-4" />
+  },
+  {
+    name: "skTime",
+    description: "A leading organization specializing in time-series analysis and machine learning applications.",
+    icon: <Building2 className="w-12 h-12 text-glucose-600 mb-4" />
   }
-}, {
-  name: "Prof. Michael Rahman",
-  role: "Principal Investigator",
-  bio: "Professor of Biomedical Engineering with expertise in glucose monitoring systems and AI.",
-  image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&h=200&auto=format&fit=crop",
-  social: {
-    twitter: "#",
-    linkedin: "#",
-    github: "#"
-  }
-}, {
-  name: "Dr. Emily Watkins",
-  role: "Data Scientist",
-  bio: "Specialist in time-series analysis and predictive modeling for medical applications.",
-  image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&h=200&auto=format&fit=crop",
-  social: {
-    twitter: "#",
-    linkedin: "#",
-    github: "#"
-  }
-}, {
-  name: "Dr. James Wilson",
-  role: "ML Engineer",
-  bio: "Expert in causal inference and reinforcement learning with healthcare background.",
-  image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=200&h=200&auto=format&fit=crop",
-  social: {
-    twitter: "#",
-    linkedin: "#",
-    github: "#"
-  }
-}];
+];
+
 export const TeamSection = () => {
-  return <section id="team" className="bg-white py-0">
+  return <section id="team" className="bg-white py-12">
       <div className="section-container">
-        <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
+        <div className="max-w-3xl mx-auto text-center mb-12 animate-fade-in">
           <div className="inline-block mb-4">
             <div className="bg-glucose-50 text-glucose-700 font-medium px-4 py-1 rounded-full text-sm">
               Our Team
             </div>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Our Collaborations</h2>
-          <p className="text-lg text-gray-600">Blood Glucose Control is a design team with WAT.ai and Gluroo Imaginations Inc.</p>
+          <p className="text-lg text-gray-600">Blood Glucose Control is a design team collaborating with multiple organizations to drive innovation in diabetes management.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {teamMembers.map((member, index) => <div key={index} className="glass-card overflow-hidden transition-all duration-300 hover:shadow-xl group animate-fade-in" style={{
-          animationDelay: `${0.1 * index}s`
-        }}>
-              <div className="aspect-square overflow-hidden">
-                
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          {collaborators.map((org, index) => (
+            <div key={index} className="glass-card overflow-hidden transition-all duration-300 hover:shadow-xl group animate-fade-in" style={{
+              animationDelay: `${0.1 * index}s`
+            }}>
+              <div className="p-6 flex flex-col items-center text-center h-full">
+                {org.icon}
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{org.name}</h3>
+                <p className="text-gray-600 text-sm flex-grow">{org.description}</p>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900">{member.name}</h3>
-                <p className="text-glucose-600 font-medium mb-2">{member.role}</p>
-                <p className="text-gray-600 text-sm mb-4">{member.bio}</p>
-                <div className="flex space-x-3">
-                  <a href={member.social.twitter} className="text-gray-400 hover:text-glucose-600 transition-colors">
-                    <Twitter size={18} />
-                  </a>
-                  <a href={member.social.linkedin} className="text-gray-400 hover:text-glucose-600 transition-colors">
-                    <Linkedin size={18} />
-                  </a>
-                  <a href={member.social.github} className="text-gray-400 hover:text-glucose-600 transition-colors">
-                    <Github size={18} />
-                  </a>
-                </div>
-              </div>
-            </div>)}
+            </div>
+          ))}
         </div>
 
-        <div className="mt-20 bg-gradient-to-r from-glucose-50 to-blue-50 rounded-2xl overflow-hidden shadow-sm animate-fade-in">
-          <div className="p-8 md:p-12 text-center">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">Text Here</h3>
-            <p className="text-gray-700 mb-6 max-w-3xl mx-auto">Text here</p>
-            
+        <div className="bg-gradient-to-r from-glucose-50 to-blue-50 rounded-2xl overflow-hidden shadow-sm animate-fade-in p-8 md:p-12 text-center">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="md:text-left">
+              <h3 className="text-2xl md:text-3xl font-bold mb-4">Meet Our Research Team</h3>
+              <p className="text-gray-700 mb-6">Learn more about the talented individuals behind our groundbreaking research and development.</p>
+              <Link to="/team">
+                <Button className="group">
+                  View Team Members
+                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+            </div>
+            <div className="w-64 h-64 flex items-center justify-center">
+              <Users className="w-32 h-32 text-glucose-600" />
+            </div>
           </div>
         </div>
       </div>
