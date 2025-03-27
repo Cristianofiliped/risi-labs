@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { MenuIcon, X } from "lucide-react";
+import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const navLinks = [
   { name: "Home", href: "#home" },
@@ -15,6 +17,8 @@ const navLinks = [
 export const NavBar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const isMainPage = location.pathname === "/";
   
   useEffect(() => {
     const handleScroll = () => {
@@ -31,6 +35,12 @@ export const NavBar = () => {
 
   const scrollToSection = (id: string) => {
     setMobileMenuOpen(false);
+    
+    if (!isMainPage) {
+      // If we're not on the main page, navigate to main page with hash
+      return; // The Link component will handle navigation
+    }
+    
     const element = document.querySelector(id);
     if (element) {
       const headerOffset = 80;
@@ -54,30 +64,40 @@ export const NavBar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
           <div className="flex items-center">
-            <a href="#home" className="flex items-center" onClick={(e) => { e.preventDefault(); scrollToSection("#home"); }}>
+            <Link to="/" className="flex items-center">
               <div className="w-8 h-8 bg-glucose-600 rounded-lg mr-2 flex items-center justify-center">
-                <span className="text-white font-bold">G</span>
+                <span className="text-white font-bold">R</span>
               </div>
               <span className={cn(
                 "font-medium text-lg transition-colors duration-300",
                 scrolled ? "text-glucose-900" : "text-glucose-800"
               )}>
-                Glucose Control Research
+                Risi Lab
               </span>
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-6">
             {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="nav-link"
-                onClick={(e) => { e.preventDefault(); scrollToSection(link.href); }}
-              >
-                {link.name}
-              </a>
+              isMainPage ? (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="nav-link"
+                  onClick={(e) => { e.preventDefault(); scrollToSection(link.href); }}
+                >
+                  {link.name}
+                </a>
+              ) : (
+                <Link
+                  key={link.name}
+                  to={`/${link.href}`}
+                  className="nav-link"
+                >
+                  {link.name}
+                </Link>
+              )
             ))}
           </nav>
 
@@ -99,14 +119,24 @@ export const NavBar = () => {
       )}>
         <nav className="flex flex-col space-y-4 px-6">
           {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="text-lg py-2 border-b border-gray-100 last:border-0"
-              onClick={(e) => { e.preventDefault(); scrollToSection(link.href); }}
-            >
-              {link.name}
-            </a>
+            isMainPage ? (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-lg py-2 border-b border-gray-100 last:border-0"
+                onClick={(e) => { e.preventDefault(); scrollToSection(link.href); }}
+              >
+                {link.name}
+              </a>
+            ) : (
+              <Link
+                key={link.name}
+                to={`/${link.href}`}
+                className="text-lg py-2 border-b border-gray-100 last:border-0"
+              >
+                {link.name}
+              </Link>
+            )
           ))}
         </nav>
       </div>

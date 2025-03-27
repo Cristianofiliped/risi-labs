@@ -1,4 +1,3 @@
-
 import { NavBar } from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
 import { Github, Linkedin, Twitter, ArrowLeft } from "lucide-react";
@@ -115,10 +114,7 @@ const TeamPage = () => {
                 Back to Home
               </Button>
             </Link>
-            <h1 className="text-4xl font-bold text-gray-900 mb-2">Our Research Team</h1>
-            <p className="text-xl text-gray-600 max-w-3xl">
-              Meet the dedicated individuals working on innovative solutions for diabetes management.
-            </p>
+            <h1 className="text-4xl font-bold text-gray-900 mb-2">The Team</h1>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
