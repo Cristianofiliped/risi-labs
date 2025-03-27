@@ -52,17 +52,6 @@ export const TeamSection = () => {
           </div>
         </div>
 
-        {/* Collaborators section heading */}
-        <div className="max-w-3xl mx-auto text-center mb-8 animate-fade-in">
-          <div className="inline-block mb-4">
-            <div className="bg-glucose-50 text-glucose-700 font-medium px-4 py-1 rounded-full text-sm">
-              Our Collaborations
-            </div>
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Research Partners</h2>
-          <p className="text-lg text-gray-600 mb-8">Risi Lab is a design team collaborating with multiple organizations to drive innovation in diabetes management.</p>
-        </div>
-
         {/* Collaborators grid - now displayed second */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {collaborators.map((org, index) => (
