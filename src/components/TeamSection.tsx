@@ -28,17 +28,19 @@ export const TeamSection = () => {
         <div className="max-w-3xl mx-auto text-center mb-12 animate-fade-in">
           <div className="inline-block mb-4">
             <div className="bg-glucose-50 text-glucose-700 font-medium px-4 py-1 rounded-full text-sm">
-              Meet Our Team
+              Our Team
             </div>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">The Team</h2>
-          <p className="text-lg text-gray-600">Learn more about the talented individuals behind our groundbreaking research and development.</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Our Collaborations</h2>
+          <p className="text-lg text-gray-600">Risi Lab is a design team collaborating with multiple organizations to drive innovation in diabetes management.</p>
         </div>
 
         {/* Meet Our Team section - now displayed first */}
         <div className="bg-gradient-to-r from-glucose-50 to-blue-50 rounded-2xl overflow-hidden shadow-sm animate-fade-in p-8 md:p-12 text-center mb-16">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="md:text-left">
+              <h3 className="text-2xl md:text-3xl font-bold mb-4">Meet Our Team</h3>
+              <p className="text-gray-700 mb-6">Learn more about the talented individuals behind our groundbreaking research and development.</p>
               <Link to="/team">
                 <Button className="group">
                   View Team Members
