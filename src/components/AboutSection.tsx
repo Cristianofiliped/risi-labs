@@ -9,7 +9,7 @@ export const AboutSection = () => {
             </div>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Actionable insights to People with Diabetes and their healthcare practitioners.</h2>
-          <p className="text-lg text-gray-600">Utilizing semi-supervised learning and causal machine-learning techniques, we aim to improve blood glucose level outcomes for people with Type 1 Diabetes to mitigate short-term risk and improve long-term quality of life.</p>
+          <p className="text-lg text-gray-600">Utilizing semi-supervised learning and causal machine-learning techniques, we aim to improve blood glucose level outcomes to mitigate short-term risk and improve long-term quality of life.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
