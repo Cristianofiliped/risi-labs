@@ -14,7 +14,7 @@ export const HeroSection = () => {
     }
   };
   return <section id="home" className="relative min-h-screen flex items-center">
-      <div className="absolute inset-0 bg-gradient-to-b from-glucose-50/60 to-white/30 z-0"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-glucose-50/60 to-white/30 z-0 bg-glucose-50"></div>
       
       {/* Background decorative elements */}
       <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-glucose-200/20 rounded-full filter blur-3xl animate-pulse-gentle"></div>
@@ -22,7 +22,7 @@ export const HeroSection = () => {
       animationDelay: "1s"
     }}></div>
       
-      <div className="section-container relative z-10">
+      <div className="section-container relative z-10 bg-glucose-50">
         <div className="max-w-4xl">
           <div className="inline-block animate-fade-in">
             <div className="bg-glucose-50 text-glucose-700 font-medium px-4 py-1 rounded-full text-sm inline-flex items-center">
