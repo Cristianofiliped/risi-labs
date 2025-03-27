@@ -1,6 +1,6 @@
 import { Activity, Brain, Database, HeartPulse } from "lucide-react";
 export const AboutSection = () => {
-  return <section id="about" className="bg-white py-20">
+  return <section id="about" className="bg-white py-0">
       <div className="section-container">
         <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
           <div className="inline-block mb-4">
@@ -39,43 +39,7 @@ export const AboutSection = () => {
         </div>
 
         <div className="mt-20 bg-gradient-to-r from-glucose-50 to-blue-50 rounded-2xl overflow-hidden shadow-sm animate-fade-in">
-          <div className="grid md:grid-cols-2 items-center">
-            <div className="p-8 md:p-12">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4">Type 1 Diabetes Challenge</h3>
-              <p className="text-gray-700 mb-6">
-                Type 1 Diabetes is a complex autoimmune disease affecting nearly 10 million people worldwide. Managing this condition requires constant monitoring and adjustments, creating both mental and physical burden for patients.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <div className="flex items-center">
-                  <div className="w-12 h-12 rounded-full bg-glucose-100 flex items-center justify-center mr-4">
-                    <span className="text-glucose-700 font-bold">10M</span>
-                  </div>
-                  <span className="text-sm text-gray-600">People affected worldwide</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-12 h-12 rounded-full bg-glucose-100 flex items-center justify-center mr-4">
-                    <span className="text-glucose-700 font-bold">24/7</span>
-                  </div>
-                  <span className="text-sm text-gray-600">Constant management required</span>
-                </div>
-              </div>
-            </div>
-            <div className="hidden md:block h-full bg-gradient-to-br from-glucose-100 to-glucose-200 p-12">
-              <div className="aspect-square max-w-sm mx-auto bg-white rounded-2xl shadow-lg p-6 flex items-center justify-center">
-                <div className="w-full h-full relative">
-                  <div className="absolute inset-4 border-4 border-dashed border-glucose-200 rounded-full animate-spin-slow" style={{
-                  animationDuration: '30s'
-                }}></div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="text-5xl font-bold text-glucose-600 mb-2">T1D</div>
-                      <div className="text-sm text-gray-500">Type 1 Diabetes</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
     </section>;
