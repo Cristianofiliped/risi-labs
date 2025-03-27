@@ -35,21 +35,8 @@ export const TeamSection = () => {
           <p className="text-lg text-gray-600">Risi Lab is a design team collaborating with multiple organizations to drive innovation in diabetes management.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {collaborators.map((org, index) => (
-            <div key={index} className="glass-card overflow-hidden transition-all duration-300 hover:shadow-xl group animate-fade-in" style={{
-              animationDelay: `${0.1 * index}s`
-            }}>
-              <div className="p-6 flex flex-col items-center text-center h-full">
-                {org.icon}
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{org.name}</h3>
-                <p className="text-gray-600 text-sm flex-grow">{org.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="bg-gradient-to-r from-glucose-50 to-blue-50 rounded-2xl overflow-hidden shadow-sm animate-fade-in p-8 md:p-12 text-center">
+        {/* Meet Our Team section - now displayed first */}
+        <div className="bg-gradient-to-r from-glucose-50 to-blue-50 rounded-2xl overflow-hidden shadow-sm animate-fade-in p-8 md:p-12 text-center mb-16">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="md:text-left">
               <h3 className="text-2xl md:text-3xl font-bold mb-4">Meet Our Team</h3>
@@ -65,6 +52,21 @@ export const TeamSection = () => {
               <Users className="w-32 h-32 text-glucose-600" />
             </div>
           </div>
+        </div>
+
+        {/* Collaborators grid - now displayed second */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {collaborators.map((org, index) => (
+            <div key={index} className="glass-card overflow-hidden transition-all duration-300 hover:shadow-xl group animate-fade-in" style={{
+              animationDelay: `${0.1 * index}s`
+            }}>
+              <div className="p-6 flex flex-col items-center text-center h-full">
+                {org.icon}
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{org.name}</h3>
+                <p className="text-gray-600 text-sm flex-grow">{org.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>;
