@@ -26,14 +26,10 @@ export const ResearchSection = () => {
       <div className="section-container">
         <div className="max-w-3xl mx-auto text-center mb-12 animate-fade-in">
           <div className="inline-block mb-4">
-            <div className="bg-glucose-100 text-glucose-700 font-medium px-4 py-1 rounded-full text-sm">
-              Our Research
-            </div>
+            <div className="bg-glucose-100 text-glucose-700 font-medium px-4 py-1 rounded-full text-sm">Our Research</div>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Research Interests</h2>
-          <p className="text-lg text-gray-600 mb-8">
-            We're developing innovative machine learning solutions to address the complex challenges of diabetes management and improve quality of life.
-          </p>
+          <p className="text-lg text-gray-600 mb-8">Research subheader here: We're developing innovative machine learning solutions to address the complex challenges of diabetes management and improve quality of life.</p>
         </div>
 
         {/* Alternating Research Areas */}

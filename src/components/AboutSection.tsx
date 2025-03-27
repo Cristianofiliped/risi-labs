@@ -4,11 +4,9 @@ export const AboutSection = () => {
       <div className="section-container">
         <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
           <div className="inline-block mb-4">
-            <div className="bg-glucose-50 text-glucose-700 font-medium px-4 py-1 rounded-full text-sm">
-              Our Mission
-            </div>
+            <div className="bg-glucose-50 text-glucose-700 font-medium px-4 py-1 rounded-full text-sm">Our Mission</div>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Actionable insights to People with Diabetes and their healthcare practitioners.</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Provide actionable insights to People with Diabetes and their healthcare practitioners.</h2>
           <p className="text-lg text-gray-600">Utilizing semi-supervised learning and causal machine-learning techniques, we aim to improve blood glucose level outcomes to mitigate short-term risk and improve long-term quality of life.</p>
         </div>
 
