@@ -12,10 +12,10 @@ export const Footer = () => {
           <div className="mb-8 md:mb-0">
             <div className="flex items-center">
               <div className="w-10 h-10 bg-glucose-600 rounded-lg mr-2 flex items-center justify-center">
-                <span className="text-white font-bold">G</span>
+                <span className="text-white font-bold">R</span>
               </div>
               <div>
-                <h3 className="font-bold text-xl text-gray-900">Glucose Control Research</h3>
+                <h3 className="font-bold text-xl text-gray-900">Risi Lab</h3>
                 <p className="text-sm text-gray-600">Improving lives through intelligent diabetes management</p>
               </div>
             </div>
