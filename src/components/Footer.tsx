@@ -1,3 +1,4 @@
+
 import { ArrowUpIcon, Heart } from "lucide-react";
 export const Footer = () => {
   const scrollToTop = () => {
@@ -11,8 +12,12 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-8 md:mb-0">
             <div className="flex items-center">
-              <div className="w-10 h-10 bg-glucose-600 rounded-lg mr-2 flex items-center justify-center">
-                <span className="text-white font-bold">R</span>
+              <div className="w-10 h-10 rounded-lg mr-2 flex items-center justify-center overflow-hidden">
+                <img 
+                  src="/lovable-uploads/94d02c19-eb94-480c-a81f-06f80c5b0cb8.png" 
+                  alt="Risi Lab Logo" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div>
                 <h3 className="font-bold text-xl text-gray-900">Risi Lab</h3>
