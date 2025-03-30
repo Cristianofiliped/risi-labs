@@ -1,26 +1,28 @@
 
 import { cn } from "@/lib/utils";
+import { Skeleton } from "@/components/ui/skeleton";
+import { useState } from "react";
 
 const researchAreas = [{
-  image: "/lovable-uploads/ec6993e3-c87f-4005-b758-a59f4d27387d.png",
+  image: "/lovable-uploads/5ea82433-2390-4d69-9e4d-6619e7a479d9.png",
   title: "Automatic Meal Identification",
   description: "This team focuses on the semi-supervised change point detection problem of identifying when meals occur from blood glucose concentration time series data.",
   details: "Our approach combines continuous glucose monitoring (CGM) data with semi-supervised machine learning to detect characteristic post-meal glucose patterns. This algorithm can identify approximately 70% of meals without user input, significantly reducing the burden of manual tracking.",
   alt: "MI - Meal Identification robot icon with pizza"
 }, {
-  image: "/lovable-uploads/41a1fc2c-c258-4208-a745-0eb2beef41f5.png",
+  image: "/lovable-uploads/82556596-6a64-4fe1-8717-45053096e243.png",
   title: "Nocturnal Hypoglycemic Probabilistic Forecasting",
   description: "This team focuses on probabilistic forecasting of blood glucose concentrations when type 1 diabetics are sleeping to help predict when hypoglycemic events are likely to occur.",
   details: "Using recurrent neural networks and time-series analysis, our nocturnal forecasting system analyzes patterns in daily glucose data, activity levels, insulin dosing, and nutritional intake to predict the likelihood of nighttime hypoglycemia with 85% accuracy up to 4 hours in advance.",
   alt: "NF - Nocturnal Forecasting robot with sleep hat"
 }, {
-  image: "/lovable-uploads/d30d600f-32aa-49b4-a9cb-a50f7897cbb1.png",
+  image: "/lovable-uploads/c4a6e8a0-491a-4863-9dad-ab093c185f6c.png",
   title: "Causal Blood Glucose Dynamics",
   description: "This team focuses on developing causal models for better understanding of blood glucose dynamics.",
   details: "Our causal machine learning framework combines counterfactual reasoning with reinforcement learning to suggest personalized treatment adjustments. By understanding the causal relationships between actions and outcomes for different patient profiles, we can provide more effective, individualized recommendations.",
   alt: "CM - Causal Modeling robot icon"
 }, {
-  image: "/lovable-uploads/56413b26-816e-4b3a-894b-99008b11a7bf.png",
+  image: "/lovable-uploads/546de5a0-8b41-44e0-ab0e-649f7e829fd6.png",
   title: "RL Insulin Pump",
   description: "This team focuses on developing reinforcement learning models that operate basal-bolus controllers to maximize time in the range of type-1 diabetics.",
   details: "Our reinforcement learning approach optimizes insulin delivery through adaptive basal rates and bolus recommendations. Through continuous learning from patient data, the system improves glycemic control by predicting optimal insulin dosing patterns tailored to individual metabolic responses.",
@@ -28,6 +30,14 @@ const researchAreas = [{
 }];
 
 export const ResearchSection = () => {
+  const [imagesLoaded, setImagesLoaded] = useState<boolean[]>(Array(researchAreas.length).fill(false));
+
+  const handleImageLoad = (index: number) => {
+    const newImagesLoaded = [...imagesLoaded];
+    newImagesLoaded[index] = true;
+    setImagesLoaded(newImagesLoaded);
+  };
+
   return <section id="research" className="bg-gradient-to-b from-white to-glucose-50/30 py-0">
       <div className="section-container">
         <div className="max-w-3xl mx-auto text-center mb-12 animate-fade-in">
@@ -35,7 +45,7 @@ export const ResearchSection = () => {
             <div className="bg-glucose-100 text-glucose-700 font-medium px-4 py-1 rounded-full text-sm">Our Research</div>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Research Interests</h2>
-          <p className="text-lg text-gray-600 mb-8">Research subheader here: We're developing innovative machine learning solutions to address the complex challenges of diabetes management and improve quality of life.</p>
+          <p className="text-lg text-gray-600 mb-8">We're developing innovative machine learning solutions to address the complex challenges of diabetes management and improve quality of life.</p>
         </div>
 
         {/* Alternating Research Areas */}
@@ -52,14 +62,17 @@ export const ResearchSection = () => {
                 </div>
               </div>
               
-              <div className={cn("order-1 aspect-square bg-transparent rounded-xl flex items-center justify-center relative overflow-hidden", index % 2 === 1 ? "md:order-2" : "md:order-1")}>
-                <div className="w-64 h-64 flex items-center justify-center">
-                  <img 
-                    src={area.image} 
-                    alt={area.alt} 
-                    className="max-w-full max-h-full object-contain"
-                  />
-                </div>
+              <div className={cn("order-1 aspect-square rounded-xl flex items-center justify-center relative overflow-hidden", index % 2 === 1 ? "md:order-2" : "md:order-1")}>
+                {!imagesLoaded[index] && (
+                  <Skeleton className="absolute inset-0 bg-gray-100" />
+                )}
+                <img 
+                  src={area.image} 
+                  alt={area.alt} 
+                  className="w-full h-auto object-contain"
+                  onLoad={() => handleImageLoad(index)}
+                  style={{ visibility: imagesLoaded[index] ? 'visible' : 'hidden' }}
+                />
               </div>
             </div>)}
         </div>
