@@ -52,7 +52,7 @@ export const ResearchSection = () => {
                 </div>
               </div>
               
-              <div className={cn("order-1 aspect-square bg-glucose-50 rounded-xl flex items-center justify-center relative overflow-hidden", index % 2 === 1 ? "md:order-2" : "md:order-1")}>
+              <div className={cn("order-1 aspect-square bg-transparent rounded-xl flex items-center justify-center relative overflow-hidden", index % 2 === 1 ? "md:order-2" : "md:order-1")}>
                 <div className="w-64 h-64 flex items-center justify-center">
                   <img 
                     src={area.image} 
@@ -60,7 +60,6 @@ export const ResearchSection = () => {
                     className="max-w-full max-h-full object-contain"
                   />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent to-glucose-100/50"></div>
               </div>
             </div>)}
         </div>
