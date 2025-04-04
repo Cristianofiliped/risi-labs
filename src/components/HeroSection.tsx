@@ -1,3 +1,4 @@
+
 import { ArrowDownIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 export const HeroSection = () => {
@@ -34,13 +35,12 @@ export const HeroSection = () => {
           <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-tight animate-fade-in" style={{
           animationDelay: "0.1s"
         }}>
-            Simplifying Diabetes Management with{" "}
-            <span className="text-glucose-600">Machine Learning</span>
+            Simplifying Diabetes Management <span className="whitespace-nowrap">with <span className="text-glucose-600">Machine Learning</span></span>
           </h1>
           
           <p className="mt-6 text-xl text-gray-600 max-w-3xl animate-fade-in" style={{
           animationDelay: "0.2s"
-        }}>Transforming time-series predictive technology for improved health outcomes. </p>
+        }}>Transforming time-series predictive technology for improved health outcomes. </p>
           
           <div className="mt-10 flex flex-wrap gap-4 animate-fade-in" style={{
           animationDelay: "0.3s"
