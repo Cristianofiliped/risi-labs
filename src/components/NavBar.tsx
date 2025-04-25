@@ -53,7 +53,7 @@ export const NavBar = () => {
     }
   };
   return <header className={cn("fixed w-full top-0 z-50 transition-all duration-300", scrolled ? "bg-white/80 backdrop-blur-md shadow-sm" : "bg-transparent")}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-glucose-100">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-transparent">
         <div className="flex justify-between items-center h-16 md:h-20">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
