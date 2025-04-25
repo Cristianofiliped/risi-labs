@@ -1,96 +1,134 @@
 import { NavBar } from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
-import { Github, Linkedin, Twitter, ArrowLeft } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
-const teamMembers = [{
-  name: "Dr. Sarah Chen",
-  role: "Lead Research Scientist - Nocturnal Forecasting Team",
-  bio: "PhD in Machine Learning with focus on healthcare applications. 10+ years of experience in diabetes research.",
-  image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&h=200&auto=format&fit=crop",
-  social: {
-    twitter: "#",
-    linkedin: "#",
-    github: "#"
+
+const teamMembers = [
+  // TPMs first
+  {
+    name: "Christopher Risi",
+    role: "TPM - Multiple Teams",
+    bio: "PhD, Computer Science, 2026",
+    subteams: ["Nocturnal Hypoglycemic Forecasting", "RL Insulin Pump", "Automatic Meal Identification", "Casual Blood Glucose Dynamics", "Benchmark"],
+    social: {
+      email: "cjrisi@uwaterloo.ca",
+      github: "https://github.com/RobotPsychologist",
+      linkedin: "https://www.linkedin.com/in/christopherrisi/"
+    }
+  },
+  {
+    name: "Dvir Zagury-Grynbaum",
+    role: "TPM - Casual Blood Glucose Dynamics",
+    bio: "BS Mathematical Physics, 2026",
+    subteams: ["Casual Blood Glucose Dynamics"],
+    social: {
+      email: "dzagury@uwaterloo.ca",
+      github: "www.github.com/dvirzg",
+      linkedin: "www.linkedin.com/in/dvirzagury"
+    }
+  },
+  // Rest of the team
+  {
+    name: "Tony Chan",
+    role: "Developer",
+    bio: "BASc, Computer Engineering, 2027",
+    subteams: ["Nocturnal Hypoglycemic Forecasting", "RL Insulin Pump", "Automatic Meal Identification", "Benchmark"],
+    social: {
+      linkedin: "https://www.linkedin.com/in/tony-chan-a871a1254/"
+    }
+  },
+  {
+    name: "Andrew Zhan",
+    role: "Researcher",
+    bio: "BBA(WLU) & BCS(UW) Double Degree",
+    subteams: ["RL Insulin Pump"],
+    social: {
+      linkedin: "https://www.linkedin.com/in/tianyi-zhan/"
+    }
+  },
+  {
+    name: "Gavin Katz",
+    role: "Researcher",
+    bio: "BASc, Biomedical Engineering, 2027",
+    subteams: ["Nocturnal Hypoglycemic Forecasting", "RL Insulin Pump", "Automatic Meal Identification"],
+    social: {
+      linkedin: "https://www.linkedin.com/in/gavin-katz-89990321b"
+    }
+  },
+  {
+    name: "Cristiano Da Silva",
+    role: "Researcher",
+    bio: "BaSc, Mechanical Engineering, 2029",
+    subteams: ["Nocturnal Hypoglycemic Forecasting"]
+  },
+  {
+    name: "Vilohith Rao",
+    role: "Researcher",
+    bio: "BCS, Computer Science, 2028",
+    subteams: ["Nocturnal Hypoglycemic Forecasting"],
+    social: {
+      linkedin: "https://www.linkedin.com/in/vilohith-rao-966295213/"
+    }
+  },
+  {
+    name: "Jonathan Gong",
+    role: "Researcher",
+    bio: "BCS, Computer Science, 2029",
+    subteams: ["Casual Blood Glucose Dynamics"],
+    social: {
+      linkedin: "https://ca.linkedin.com/in/jonathan-gong-005491263"
+    }
+  },
+  {
+    name: "Nathan Lu",
+    role: "Researcher",
+    bio: "BASc, Management Engineering, 2028",
+    subteams: ["Casual Blood Glucose Dynamics"],
+    social: {
+      email: "lunathan2005@gmail.com",
+      github: "https://github.com/NathanL15",
+      linkedin: "https://www.linkedin.com/in/nathan-lu-/"
+    }
+  },
+  {
+    name: "Yimeng Xie",
+    role: "Researcher",
+    bio: "BCS, Computer Science, 2026",
+    subteams: ["RL Insulin Pump"],
+    social: {
+      linkedin: "https://www.linkedin.com/in/yimeng-xie-381382213/"
+    }
+  },
+  {
+    name: "Alyssa D'Souza",
+    role: "Researcher",
+    bio: "BSE, Software Engineering, 2026",
+    subteams: ["Nocturnal Hypoglycemic Forecasting", "RL Insulin Pump"],
+    social: {
+      website: "https://alyssadsouza.github.io/"
+    }
+  },
+  {
+    name: "Sneha Rao",
+    role: "Researcher",
+    bio: "MEng co-op, Electrical and Computer Engineering, 2025",
+    subteams: ["Casual Blood Glucose Dynamics"],
+    social: {
+      github: "https://github.com/sneha3799",
+      linkedin: "https://www.linkedin.com/in/sneha-rao-634264164/"
+    }
   }
-}, {
-  name: "Prof. Michael Rahman",
-  role: "Principal Investigator - Causal Blood Glucose Dynamics Team",
-  bio: "Professor of Biomedical Engineering with expertise in glucose monitoring systems and AI.",
-  image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&h=200&auto=format&fit=crop",
-  social: {
-    twitter: "#",
-    linkedin: "#",
-    github: "#"
-  }
-}, {
-  name: "Dr. Emily Watkins",
-  role: "Data Scientist - Automatic Meal Identification Team",
-  bio: "Specialist in time-series analysis and predictive modeling for medical applications.",
-  image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&h=200&auto=format&fit=crop",
-  social: {
-    twitter: "#",
-    linkedin: "#",
-    github: "#"
-  }
-}, {
-  name: "Dr. James Wilson",
-  role: "ML Engineer - RL Insulin Pump Team",
-  bio: "Expert in causal inference and reinforcement learning with healthcare background.",
-  image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=200&h=200&auto=format&fit=crop",
-  social: {
-    twitter: "#",
-    linkedin: "#",
-    github: "#"
-  }
-}, {
-  name: "Alex Thompson",
-  role: "Software Engineer - Nocturnal Forecasting Team",
-  bio: "Specialized in developing robust algorithms for healthcare applications with a focus on real-time monitoring systems.",
-  image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=200&h=200&auto=format&fit=crop",
-  social: {
-    twitter: "#",
-    linkedin: "#",
-    github: "#"
-  }
-}, {
-  name: "Dr. Lisa Kumar",
-  role: "Biostatistician - Causal Blood Glucose Dynamics Team",
-  bio: "Expert in statistical modeling and analysis of healthcare data with emphasis on longitudinal studies.",
-  image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&h=200&auto=format&fit=crop",
-  social: {
-    twitter: "#",
-    linkedin: "#",
-    github: "#"
-  }
-}, {
-  name: "Ryan Martinez",
-  role: "Research Assistant - Automatic Meal Identification Team",
-  bio: "PhD candidate focusing on machine learning approaches to pattern recognition in continuous glucose data.",
-  image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&h=200&auto=format&fit=crop",
-  social: {
-    twitter: "#",
-    linkedin: "#",
-    github: "#"
-  }
-}, {
-  name: "Dr. Priya Sharma",
-  role: "Clinical Advisor - RL Insulin Pump Team",
-  bio: "Endocrinologist with specialty in diabetes technologies and patient-centered care approaches.",
-  image: "https://images.unsplash.com/photo-1573497019236-61e7a3e07f36?q=80&w=200&h=200&auto=format&fit=crop",
-  social: {
-    twitter: "#",
-    linkedin: "#",
-    github: "#"
-  }
-}];
+];
+
 const TeamPage = () => {
-  // Scroll to top when the component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  return <div className="min-h-screen flex flex-col">
+
+  return (
+    <div className="min-h-screen flex flex-col">
       <NavBar />
       <main className="flex-grow pt-20">
         <div className="section-container">
@@ -101,45 +139,62 @@ const TeamPage = () => {
                 Back to Home
               </Button>
             </Link>
-            <h1 className="text-4xl font-bold text-gray-900 mb-2">The Team</h1>
+            <h1 className="text-4xl font-bold text-gray-900 mb-2">Our Research Team</h1>
+            <p className="text-xl text-gray-600">Meet the talented individuals driving innovation in diabetes research</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {teamMembers.map((member, index) => <div key={index} className="glass-card overflow-hidden transition-all duration-300 hover:shadow-xl group animate-fade-in" style={{
-            animationDelay: `${0.05 * index}s`
-          }}>
-                <div className="aspect-square overflow-hidden">
-                  <img src={member.image} alt={member.name} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {teamMembers.map((member, index) => (
+              <div
+                key={index}
+                className="glass-card overflow-hidden transition-all duration-300 hover:shadow-xl group animate-fade-in"
+                style={{ animationDelay: `${0.05 * index}s` }}
+              >
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-gray-900">{member.name}</h3>
                   <p className="text-glucose-600 font-medium mb-2">{member.role}</p>
-                  <p className="text-gray-600 text-sm mb-4">{member.bio}</p>
+                  <p className="text-gray-600 text-sm mb-2">{member.bio}</p>
+                  <div className="text-sm text-gray-500 mb-4">
+                    {member.subteams.map((subteam, idx) => (
+                      <span key={idx} className="inline-block bg-glucose-50 text-glucose-700 rounded-full px-3 py-1 text-xs font-medium mr-2 mb-2">
+                        {subteam}
+                      </span>
+                    ))}
+                  </div>
                   <div className="flex space-x-3">
-                    <a href={member.social.twitter} className="text-gray-400 hover:text-glucose-600 transition-colors">
-                      <Twitter size={18} />
-                    </a>
-                    <a href={member.social.linkedin} className="text-gray-400 hover:text-glucose-600 transition-colors">
-                      <Linkedin size={18} />
-                    </a>
-                    <a href={member.social.github} className="text-gray-400 hover:text-glucose-600 transition-colors">
-                      <Github size={18} />
-                    </a>
+                    {member.social?.email && (
+                      <a href={`mailto:${member.social.email}`} className="text-gray-400 hover:text-glucose-600 transition-colors">
+                        <Mail size={18} />
+                      </a>
+                    )}
+                    {member.social?.linkedin && (
+                      <a href={member.social.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-glucose-600 transition-colors">
+                        <Linkedin size={18} />
+                      </a>
+                    )}
+                    {member.social?.github && (
+                      <a href={member.social.github} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-glucose-600 transition-colors">
+                        <Github size={18} />
+                      </a>
+                    )}
                   </div>
                 </div>
-              </div>)}
+              </div>
+            ))}
           </div>
 
           <div className="bg-gradient-to-r from-glucose-50 to-blue-50 rounded-2xl overflow-hidden shadow-sm animate-fade-in p-8 text-center mb-16">
             <h3 className="text-2xl font-bold mb-4">Join Our Team</h3>
             <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
 
-Team subheading here: 
+Team subheading here: 
 We're always looking for talented researchers and engineers passionate about making a difference in diabetes care. Contact us to learn about current opportunities.</p>
           </div>
         </div>
       </main>
       <Footer />
-    </div>;
+    </div>
+  );
 };
+
 export default TeamPage;
