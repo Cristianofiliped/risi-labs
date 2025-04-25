@@ -1,4 +1,3 @@
-
 import { ArrowDownIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 export const HeroSection = () => {
@@ -40,7 +39,7 @@ export const HeroSection = () => {
           
           <p className="mt-6 text-xl text-gray-600 max-w-3xl animate-fade-in" style={{
           animationDelay: "0.2s"
-        }}>Transforming time-series predictive technology for improved health outcomes. </p>
+        }}>Developing time-series predictive technology for improved health outcomes.</p>
           
           <div className="mt-10 flex flex-wrap gap-4 animate-fade-in" style={{
           animationDelay: "0.3s"
