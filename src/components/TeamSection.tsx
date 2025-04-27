@@ -1,21 +1,21 @@
-
 import { cn } from "@/lib/utils";
 import { ArrowRight, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const collaborators = [{
   name: "WAT.ai",
   description: "An organization focused on artificial intelligence research and applications in healthcare.",
-  icon: <Building2 className="w-12 h-12 text-glucose-600 mb-4" />
+  image: "/lovable-uploads/d6220671-7885-4d6a-9fcf-bbd8fa6e32d9.png"
 }, {
   name: "Gluroo Imaginations Inc",
   description: "A specialized healthcare technology company developing innovative solutions for diabetes management.",
-  icon: <Building2 className="w-12 h-12 text-glucose-600 mb-4" />
+  image: "/lovable-uploads/db93efb5-0c53-4dcf-9fa5-bbaf45544f04.png"
 }, {
   name: "skTime",
   description: "A leading organization specializing in time-series analysis and machine learning applications.",
-  icon: <Building2 className="w-12 h-12 text-glucose-600 mb-4" />
+  image: "/lovable-uploads/7bb2b192-20ab-4a33-abad-2bb1d966315c.png"
 }];
 
 export const TeamSection = () => {
@@ -44,15 +44,23 @@ export const TeamSection = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {collaborators.map((org, index) => <div key={index} className="glass-card overflow-hidden transition-all duration-300 hover:shadow-xl group animate-fade-in" style={{
-          animationDelay: `${0.1 * index}s`
-        }}>
-              <div className="p-6 flex flex-col items-center text-center h-full">
-                {org.icon}
+          {collaborators.map((org, index) => (
+            <div key={index} className="glass-card overflow-hidden transition-all duration-300 hover:shadow-xl group animate-fade-in" style={{
+              animationDelay: `${0.1 * index}s`
+            }}>
+              <AspectRatio ratio={16/9} className="bg-muted">
+                <img 
+                  src={org.image} 
+                  alt={`${org.name} logo`}
+                  className="object-cover w-full h-full p-6"
+                />
+              </AspectRatio>
+              <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{org.name}</h3>
-                <p className="text-gray-600 text-sm flex-grow">{org.description}</p>
+                <p className="text-gray-600 text-sm">{org.description}</p>
               </div>
-            </div>)}
+            </div>
+          ))}
         </div>
       </div>
     </section>;

@@ -23,7 +23,7 @@ const teamMembers = [
   subteams: ["Casual Blood Glucose Dynamics"],
   social: {
     email: "dzagury@uwaterloo.ca",
-    github: "www.github.com/dvirzg",
+    github: "https://github.com/dvirzg",
     linkedin: "www.linkedin.com/in/dvirzagury"
   }
 },
@@ -56,7 +56,10 @@ const teamMembers = [
   name: "Cristiano Da Silva",
   role: "Researcher",
   bio: "BaSc, Mechanical Engineering, 2029",
-  subteams: ["Nocturnal Hypoglycemic Forecasting"]
+  subteams: ["Nocturnal Hypoglycemic Forecasting"],
+  social: {
+    linkedin: "https://www.linkedin.com/in/cristianofdasilva/"
+  }
 }, {
   name: "Vilohith Rao",
   role: "Researcher",
@@ -150,6 +153,9 @@ const TeamPage = () => {
                       </a>}
                     {member.social?.github && <a href={member.social.github} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-glucose-600 transition-colors">
                         <Github size={18} />
+                      </a>}
+                    {member.social?.website && <a href={member.social.website} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-glucose-600 transition-colors">
+                        Website
                       </a>}
                   </div>
                 </div>
