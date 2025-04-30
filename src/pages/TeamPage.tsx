@@ -1,3 +1,4 @@
+
 import { NavBar } from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
 import { Github, Linkedin, Mail, ArrowLeft } from "lucide-react";
@@ -42,6 +43,24 @@ const teamMembers = [
     linkedin: "https://www.linkedin.com/in/tony-chan-a871a1254/"
   }
 }, {
+  name: "Alyssa D'Souza",
+  role: "Researcher",
+  bio: "BSE, Software Engineering, 2026",
+  image: "/lovable-uploads/d4168fec-eef9-479f-8ff4-6592de5e0adc.png", // Updated photo
+  subteams: ["Nocturnal Hypoglycemic Forecasting", "RL Insulin Pump"],
+  social: {
+    website: "https://alyssadsouza.github.io/"
+  }
+}, {
+  name: "Vilohith Rao",
+  role: "Researcher",
+  bio: "BCS, Computer Science, 2028",
+  image: "/lovable-uploads/57b2e6bf-d11a-4197-88d3-69ac33aca76e.png", // Updated photo
+  subteams: ["Nocturnal Hypoglycemic Forecasting"],
+  social: {
+    linkedin: "https://www.linkedin.com/in/vilohith-rao-966295213/"
+  }
+}, {
   name: "Jonathan Gong",
   role: "Researcher",
   bio: "BCS, Computer Science, 2029",
@@ -60,24 +79,6 @@ const teamMembers = [
     linkedin: "https://www.linkedin.com/in/cristianofdasilva/"
   }
 }, {
-  name: "Vilohith Rao",
-  role: "Researcher",
-  bio: "BCS, Computer Science, 2028",
-  image: "/lovable-uploads/57b2e6bf-d11a-4197-88d3-69ac33aca76e.png", // Updated photo
-  subteams: ["Nocturnal Hypoglycemic Forecasting"],
-  social: {
-    linkedin: "https://www.linkedin.com/in/vilohith-rao-966295213/"
-  }
-}, {
-  name: "Alyssa D'Souza",
-  role: "Researcher",
-  bio: "BSE, Software Engineering, 2026",
-  image: "/lovable-uploads/d4168fec-eef9-479f-8ff4-6592de5e0adc.png", // Updated photo
-  subteams: ["Nocturnal Hypoglycemic Forecasting", "RL Insulin Pump"],
-  social: {
-    website: "https://alyssadsouza.github.io/"
-  }
-}, {
   name: "Nathan Lu",
   role: "Researcher",
   bio: "BASc, Management Engineering, 2028",
@@ -88,7 +89,9 @@ const teamMembers = [
     github: "https://github.com/NathanL15",
     linkedin: "https://www.linkedin.com/in/nathan-lu-/"
   }
-}, {
+}, 
+// Team members without photos
+{
   name: "Gavin Katz",
   role: "Researcher",
   bio: "BASc, Biomedical Engineering, 2027",
@@ -102,9 +105,7 @@ const teamMembers = [
   bio: "BSc, Computer Science",
   subteams: ["RL Insulin Pump"],
   social: {}
-},
-// Team members without photos
-{
+}, {
   name: "Andrew Zhan",
   role: "Researcher",
   bio: "BBA(WLU) & BCS(UW) Double Degree",
