@@ -1,5 +1,7 @@
+
 import { ArrowDownIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
+
 export const HeroSection = () => {
   const scrollToAbout = () => {
     const aboutSection = document.querySelector("#about");
@@ -13,6 +15,7 @@ export const HeroSection = () => {
       });
     }
   };
+
   return <section id="home" className="relative min-h-screen flex items-center">
       <div className="absolute inset-0 bg-gradient-to-b from-glucose-50/60 to-white/30 z-0 bg-glucose-50"></div>
       
@@ -34,7 +37,8 @@ export const HeroSection = () => {
           <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-tight animate-fade-in" style={{
           animationDelay: "0.1s"
         }}>
-            Simplifying Diabetes Management <span className="whitespace-nowrap">with <span className="text-glucose-600">Machine Learning</span></span>
+            Simplifying Diabetes Management<br />
+            <span className="text-glucose-600">with Machine Learning</span>
           </h1>
           
           <p className="mt-6 text-xl text-gray-600 max-w-3xl animate-fade-in" style={{
