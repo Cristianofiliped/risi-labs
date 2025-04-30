@@ -1,4 +1,3 @@
-
 import { cn } from "@/lib/utils";
 import { ArrowRight, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -25,7 +24,7 @@ export const TeamSection = () => {
             <div className="bg-glucose-50 text-glucose-700 font-medium px-4 py-1 rounded-full text-sm">Our Team</div>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Our Research Community</h2>
-          <p className="text-lg text-gray-600">A group of researchers and engineers dedicated to advancing diabetes care through innovative technology.</p>
+          <p className="text-lg text-gray-600">Our group primarily features researchers and engineers pursuing computer science, mathematics, and bioinformatics.</p>
         </div>
 
         <div className="text-center mb-16">
@@ -39,7 +38,7 @@ export const TeamSection = () => {
 
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Partners</h2>
-          <p className="text-lg text-gray-600">INSERT PARTNER SUBTEXT HERE</p>
+          <p className="text-lg text-gray-600">Our work could not be completed without the support from the following organizations. </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
