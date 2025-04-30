@@ -1,7 +1,7 @@
 
 import { cn } from "@/lib/utils";
 import { Skeleton } from "@/components/ui/skeleton";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const researchAreas = [{
   image: "/lovable-uploads/93d9b27d-429e-4d4e-bf46-edd5d02879c9.png",
@@ -30,13 +30,22 @@ const researchAreas = [{
 }];
 
 export const ResearchSection = () => {
-  const [imagesLoaded, setImagesLoaded] = useState<boolean[]>(Array(researchAreas.length).fill(false));
+  // Change from useState to maintain image load states
+  const [imagesLoaded, setImagesLoaded] = useState<Record<number, boolean>>({});
 
-  const handleImageLoad = (index: number) => {
-    const newImagesLoaded = [...imagesLoaded];
-    newImagesLoaded[index] = true;
-    setImagesLoaded(newImagesLoaded);
-  };
+  // Preload images on component mount
+  useEffect(() => {
+    researchAreas.forEach((area, index) => {
+      const img = new Image();
+      img.src = area.image;
+      img.onload = () => {
+        setImagesLoaded(prev => ({
+          ...prev,
+          [index]: true
+        }));
+      };
+    });
+  }, []);
 
   return <section id="research" className="bg-gradient-to-b from-white to-glucose-50/30 py-0">
       <div className="section-container">
@@ -69,9 +78,11 @@ export const ResearchSection = () => {
                 <img 
                   src={area.image} 
                   alt={area.alt} 
-                  className="max-w-full max-h-64 object-contain"
-                  onLoad={() => handleImageLoad(index)}
-                  style={{ visibility: imagesLoaded[index] ? 'visible' : 'hidden' }}
+                  className={cn("max-w-full max-h-64 object-contain", 
+                    imagesLoaded[index] ? "opacity-100" : "opacity-0")}
+                  style={{ transition: "opacity 0.3s ease-in" }}
+                  loading="eager"
+                  decoding="async"
                 />
               </div>
             </div>)}

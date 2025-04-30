@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 const collaborators = [{
   name: "WAT.ai",
-  description: "An organization focused on artificial intelligence research and applications in healthcare.",
+  description: "An organization focused on artificial intelligence research and applications.",
   image: "/lovable-uploads/d6220671-7885-4d6a-9fcf-bbd8fa6e32d9.png"
 }, {
   name: "Gluroo Imaginations Inc",
