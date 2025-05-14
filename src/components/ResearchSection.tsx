@@ -1,8 +1,6 @@
-
 import { cn } from "@/lib/utils";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useState, useEffect } from "react";
-
 const researchAreas = [{
   image: "/lovable-uploads/93d9b27d-429e-4d4e-bf46-edd5d02879c9.png",
   title: "Automatic Meal Identification",
@@ -28,7 +26,6 @@ const researchAreas = [{
   details: "Our reinforcement learning approach optimizes insulin delivery through adaptive basal rates and bolus recommendations. Through continuous learning from patient data, the system improves glycemic control by predicting optimal insulin dosing patterns tailored to individual metabolic responses.",
   alt: "RL - Reinforcement Learning robot with insulin pump"
 }];
-
 export const ResearchSection = () => {
   // Change from useState to maintain image load states
   const [imagesLoaded, setImagesLoaded] = useState<Record<number, boolean>>({});
@@ -46,7 +43,6 @@ export const ResearchSection = () => {
       };
     });
   }, []);
-
   return <section id="research" className="bg-gradient-to-b from-white to-glucose-50/30 py-0">
       <div className="section-container">
         <div className="max-w-3xl mx-auto text-center mb-12 animate-fade-in">
@@ -54,7 +50,7 @@ export const ResearchSection = () => {
             <div className="bg-glucose-100 text-glucose-700 font-medium px-4 py-1 rounded-full text-sm">Our Research</div>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Research Interests</h2>
-          <p className="text-lg text-gray-600 mb-8">We're developing innovative machine learning solutions to address the complex challenges of diabetes management and improve quality of life.</p>
+          <p className="text-lg text-gray-600 mb-8">We're achieving our mission through the following subteams. </p>
         </div>
 
         {/* Alternating Research Areas */}
@@ -72,18 +68,10 @@ export const ResearchSection = () => {
               </div>
               
               <div className={cn("order-1 flex items-center justify-center relative p-4", index % 2 === 1 ? "md:order-2" : "md:order-1")}>
-                {!imagesLoaded[index] && (
-                  <Skeleton className="w-64 h-64 rounded-lg" />
-                )}
-                <img 
-                  src={area.image} 
-                  alt={area.alt} 
-                  className={cn("max-w-full max-h-64 object-contain", 
-                    imagesLoaded[index] ? "opacity-100" : "opacity-0")}
-                  style={{ transition: "opacity 0.3s ease-in" }}
-                  loading="eager"
-                  decoding="async"
-                />
+                {!imagesLoaded[index] && <Skeleton className="w-64 h-64 rounded-lg" />}
+                <img src={area.image} alt={area.alt} className={cn("max-w-full max-h-64 object-contain", imagesLoaded[index] ? "opacity-100" : "opacity-0")} style={{
+              transition: "opacity 0.3s ease-in"
+            }} loading="eager" decoding="async" />
               </div>
             </div>)}
         </div>
