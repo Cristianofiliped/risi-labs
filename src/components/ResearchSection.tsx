@@ -23,7 +23,7 @@ const researchAreas = [{
   alt: "CM - Causal Modeling robot icon"
 }, {
   image: "/lovable-uploads/ef13386b-19cc-43d9-872f-9d59e1c449fd.png",
-  title: "RL Insulin Pump",
+  title: "Reinforcement Learning Insulin Pump",
   description: "This team focuses on developing a model that controls an insulin pump to continuously improve \"time in range\" of type-1 diabetics.",
   details: "Our reinforcement learning approach optimizes insulin delivery through adaptive basal rates and bolus recommendations. Through continuous learning from patient data, the system improves glycemic control by predicting optimal insulin dosing patterns tailored to individual metabolic responses.",
   alt: "RL - Reinforcement Learning robot with insulin pump"
