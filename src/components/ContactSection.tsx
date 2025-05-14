@@ -54,11 +54,7 @@ export const ContactSection = () => {
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
             Access Our GitHub
           </h2>
-          <p className="text-lg text-gray-600">
-            Our code and models are open source and available on GitHub. Explore
-            our repositories to learn more about our work and contribute to
-            improving diabetes management.
-          </p>
+          <p className="text-lg text-gray-600">Our code and models are open source and available on GitHub. Explore our repositories to learn more about our work and contribute to improving diabetes management.</p>
         </div>
 
         <div className="">
