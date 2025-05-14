@@ -58,7 +58,7 @@ export const NavBar = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               <img src="/lovable-uploads/94d02c19-eb94-480c-a81f-06f80c5b0cb8.png" alt="Risi Lab Logo" className="w-8 h-8 mr-2" />
-              <span className={cn("font-medium text-lg transition-colors duration-300", scrolled ? "text-glucose-900" : "text-glucose-800")}> Risi Lab</span>
+              <span className={cn("font-medium text-lg transition-colors duration-300", scrolled ? "text-glucose-900" : "text-glucose-800")}>Risi Labs</span>
             </Link>
           </div>
 
