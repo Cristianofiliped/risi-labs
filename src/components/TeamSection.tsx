@@ -24,7 +24,7 @@ export const TeamSection = () => {
             <div className="bg-glucose-50 text-glucose-700 font-medium px-4 py-1 rounded-full text-sm">Our Team</div>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Our Research Community</h2>
-          <p className="text-lg text-gray-600">Our group primarily features researchers and engineers pursuing computer science, mathematics, and bioinformatics.</p>
+          <p className="text-lg text-gray-600">Our group features researchers and engineers pursuing computer science, mathematics, and bioinformatics, as well as advocates for diabetes treatment and accessibility.</p>
         </div>
 
         <div className="text-center mb-16">
