@@ -1,20 +1,23 @@
 
 import { cn } from "@/lib/utils";
 import { Skeleton } from "@/components/ui/skeleton";
+import { Button } from "@/components/ui/button";
+import { ExternalLink } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const researchAreas = [{
   image: "/lovable-uploads/93d9b27d-429e-4d4e-bf46-edd5d02879c9.png",
   title: "Automatic Meal Identification",
   description: "This team focuses on the problem of identifying when a patient has eaten a meal, using only blood glucose data without user input.",
-  details: "Our approach combines continuous glucose monitoring (CGM) data with semi-supervised machine learning to detect post-meal glucose patterns. This algorithm can identify approximately 70% of meals without user input, significantly reducing the burden of manual tracking.",
+  details: "Our approach combines continuous glucose monitoring (CGM) data with semi-supervised machine learning and to detect post-meal glucose patterns. This algorithm can identify approximately 70% of meals without user input, significantly reducing the burden of manual tracking.",
   alt: "MI - Meal Identification robot icon with pizza"
 }, {
   image: "/lovable-uploads/f8e6db75-fc11-4fc6-b52e-a2050a606ab6.png",
   title: "Forecasting Night-Time Lows",
   description: "This team focuses on using day-time blood glucose readings to predict if and when low readings are likely to occur during sleep.",
   details: "Using recurrent neural networks and time-series analysis, our nocturnal forecasting system analyzes patterns in daily glucose data, activity levels, insulin dosing, and nutritional intake to predict the likelihood of nighttime hypoglycemia with 85% accuracy up to 4 hours in advance.",
-  alt: "NF - Nocturnal Forecasting robot with sleep hat"
+  alt: "NF - Nocturnal Forecasting robot with sleep hat",
+  posterLink: "https://docs.google.com/presentation/d/1B1LSH_aF_hcvDkXoZ75mpuuKUh9vrtwwbMYfq6DfLtU/edit?usp=sharing"
 }, {
   image: "/lovable-uploads/3b4ff8e9-282f-4416-83d6-0e2bd07e9ae2.png",
   title: "Casual Blood Glucose Dynamics",
@@ -69,6 +72,19 @@ export const ResearchSection = () => {
                   <h4 className="font-semibold mb-2">Technical Approach</h4>
                   <p>{area.details}</p>
                 </div>
+                {area.posterLink && (
+                  <div className="mt-4">
+                    <Button 
+                      size="sm" 
+                      variant="outline"
+                      className="text-sm"
+                      onClick={() => window.open(area.posterLink, '_blank')}
+                    >
+                      Conference poster
+                      <ExternalLink className="ml-1 h-3 w-3" />
+                    </Button>
+                  </div>
+                )}
               </div>
               
               <div className={cn("order-1 flex items-center justify-center relative p-4", index % 2 === 1 ? "md:order-2" : "md:order-1")}>
