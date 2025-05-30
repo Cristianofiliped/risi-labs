@@ -153,7 +153,7 @@ const teamMembers = [
   bio: "",
   subteams: ["Nocturnal Hypoglycemic Forecasting"],
   social: {}
-];
+}];
 
 const alumniMembers = [{
   name: "Gavin Katz",
@@ -208,7 +208,7 @@ const TeamPage = () => {
               </Button>
             </Link>
             <h1 className="text-4xl font-bold text-gray-900 mb-2">Our Research Team</h1>
-            <p className="text-xl text-gray-600">Available contact information is provided at the bottom of their name card. </p>
+            <p className="text-xl text-gray-600">Available contact information is provided at the bottom of their name card. </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -286,7 +286,7 @@ const TeamPage = () => {
 
           <div className="mb-8">
             <h1 className="text-4xl font-bold text-gray-900 mb-2">Support</h1>
-            <p className="text-xl text-gray-600">Our research is supported by skTime and Gluroo. </p>
+            <p className="text-xl text-gray-600">Our research is supported by skTime and Gluroo. </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
