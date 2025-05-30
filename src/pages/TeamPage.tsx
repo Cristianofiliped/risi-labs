@@ -98,14 +98,6 @@ const teamMembers = [
 },
 // Team members without photos
 {
-  name: "Gavin Katz",
-  role: "Researcher",
-  bio: "BASc, Biomedical Engineering, 2027",
-  subteams: ["Nocturnal Hypoglycemic Forecasting", "RL Insulin Pump", "Automatic Meal Identification"],
-  social: {
-    linkedin: "https://www.linkedin.com/in/gavin-katz-89990321b"
-  }
-}, {
   name: "Paul Park",
   role: "Researcher",
   bio: "BSc, Computer Science",
@@ -149,12 +141,6 @@ const teamMembers = [
   subteams: ["Nocturnal Hypoglycemic Forecasting"],
   social: {}
 }, {
-  name: "Rebecca Ma",
-  role: "Researcher",
-  bio: "",
-  subteams: ["Nocturnal Hypoglycemic Forecasting"],
-  social: {}
-}, {
   name: "Julia Zhu",
   role: "Researcher",
   bio: "BCS, Computer Science",
@@ -166,7 +152,24 @@ const teamMembers = [
   bio: "",
   subteams: ["Nocturnal Hypoglycemic Forecasting"],
   social: {}
+];
+
+const alumniMembers = [{
+  name: "Gavin Katz",
+  role: "Researcher",
+  bio: "BASc, Biomedical Engineering, 2027",
+  subteams: ["Nocturnal Hypoglycemic Forecasting", "RL Insulin Pump", "Automatic Meal Identification"],
+  social: {
+    linkedin: "https://www.linkedin.com/in/gavin-katz-89990321b"
+  }
+}, {
+  name: "Rebecca Ma",
+  role: "Researcher",
+  bio: "",
+  subteams: ["Nocturnal Hypoglycemic Forecasting"],
+  social: {}
 }];
+
 const supportTeam = [{
   name: "Franz Kiraly",
   role: "skTime Core Developer",
@@ -209,6 +212,45 @@ const TeamPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {teamMembers.map((member, index) => <div key={index} className="glass-card overflow-hidden transition-all duration-300 hover:shadow-xl group animate-fade-in" style={{
+            animationDelay: `${0.05 * index}s`
+          }}>
+                {member.image && <div className="aspect-w-4 aspect-h-3 bg-gray-100">
+                    <img src={member.image} alt={member.name} className="object-cover w-full h-full" />
+                  </div>}
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900">{member.name}</h3>
+                  <p className="text-glucose-600 font-medium mb-2">{member.role}</p>
+                  <p className="text-gray-600 text-sm mb-2">{member.bio}</p>
+                  <div className="text-sm text-gray-500 mb-4">
+                    {member.subteams.map((subteam, idx) => <span key={idx} className="inline-block bg-glucose-50 text-glucose-700 rounded-full px-3 py-1 text-xs font-medium mr-2 mb-2">
+                        {subteam}
+                      </span>)}
+                  </div>
+                  <div className="flex space-x-3">
+                    {member.social?.email && <a href={`mailto:${member.social.email}`} className="text-gray-400 hover:text-glucose-600 transition-colors">
+                        <Mail size={18} />
+                      </a>}
+                    {member.social?.linkedin && <a href={member.social.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-glucose-600 transition-colors">
+                        <Linkedin size={18} />
+                      </a>}
+                    {member.social?.github && <a href={member.social.github} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-glucose-600 transition-colors">
+                        <Github size={18} />
+                      </a>}
+                    {member.social?.website && <a href={member.social.website} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-glucose-600 transition-colors">
+                        Website
+                      </a>}
+                  </div>
+                </div>
+              </div>)}
+          </div>
+
+          <div className="mb-8">
+            <h1 className="text-4xl font-bold text-gray-900 mb-2">Alumni</h1>
+            <p className="text-xl text-gray-600">Former members who have contributed to our research efforts.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {alumniMembers.map((member, index) => <div key={index} className="glass-card overflow-hidden transition-all duration-300 hover:shadow-xl group animate-fade-in" style={{
             animationDelay: `${0.05 * index}s`
           }}>
                 {member.image && <div className="aspect-w-4 aspect-h-3 bg-gray-100">
