@@ -164,7 +164,7 @@ const teamMembers = [
   name: "Safiya Makada",
   role: "Researcher",
   bio: "",
-  subteams: ["Casual Blood Glucose Dynamics"],
+  subteams: ["Nocturnal Hypoglycemic Forecasting"],
   social: {}
 }];
 const supportTeam = [{

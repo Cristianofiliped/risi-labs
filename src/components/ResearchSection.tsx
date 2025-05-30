@@ -17,7 +17,8 @@ const researchAreas = [{
   description: "This team focuses on using day-time blood glucose readings to predict if and when low readings are likely to occur during sleep.",
   details: "Using recurrent neural networks and time-series analysis, our nocturnal forecasting system analyzes patterns in daily glucose data, activity levels, insulin dosing, and nutritional intake to predict the likelihood of nighttime hypoglycemia with 85% accuracy up to 4 hours in advance.",
   alt: "NF - Nocturnal Forecasting robot with sleep hat",
-  posterLink: "https://docs.google.com/presentation/d/1B1LSH_aF_hcvDkXoZ75mpuuKUh9vrtwwbMYfq6DfLtU/edit?usp=sharing"
+  posterLink: "https://docs.google.com/presentation/d/1B1LSH_aF_hcvDkXoZ75mpuuKUh9vrtwwbMYfq6DfLtU/edit?usp=sharing",
+  publicationLink: "https://blood-glucose-control.github.io/nocturnal-hypo-gly-prob-forecast/"
 }, {
   image: "/lovable-uploads/3b4ff8e9-282f-4416-83d6-0e2bd07e9ae2.png",
   title: "Casual Blood Glucose Dynamics",
@@ -72,17 +73,30 @@ export const ResearchSection = () => {
                   <h4 className="font-semibold mb-2">Technical Approach</h4>
                   <p>{area.details}</p>
                 </div>
-                {area.posterLink && (
-                  <div className="mt-4">
-                    <Button 
-                      size="sm" 
-                      variant="outline"
-                      className="text-sm"
-                      onClick={() => window.open(area.posterLink, '_blank')}
-                    >
-                      Conference poster
-                      <ExternalLink className="ml-1 h-3 w-3" />
-                    </Button>
+                {(area.posterLink || area.publicationLink) && (
+                  <div className="mt-4 flex gap-2">
+                    {area.posterLink && (
+                      <Button 
+                        size="sm" 
+                        variant="outline"
+                        className="text-sm"
+                        onClick={() => window.open(area.posterLink, '_blank')}
+                      >
+                        Conference poster
+                        <ExternalLink className="ml-1 h-3 w-3" />
+                      </Button>
+                    )}
+                    {area.publicationLink && (
+                      <Button 
+                        size="sm" 
+                        variant="outline"
+                        className="text-sm"
+                        onClick={() => window.open(area.publicationLink, '_blank')}
+                      >
+                        Project Publication
+                        <ExternalLink className="ml-1 h-3 w-3" />
+                      </Button>
+                    )}
                   </div>
                 )}
               </div>
