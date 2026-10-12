@@ -12,7 +12,7 @@ const teamMembers = [
   name: "Christopher Risi",
   role: "TPM - Multiple Teams",
   bio: "PhD, Computer Science, 2026",
-  image: "/lovable-uploads/ff7cb2ec-b061-429d-bf42-f16bef6e6d8e.png",
+  image: `${import.meta.env.BASE_URL}lovable-uploads/ff7cb2ec-b061-429d-bf42-f16bef6e6d8e.png`,
   // Updated photo
   subteams: ["Nocturnal Hypoglycemic Forecasting", "RL Insulin Pump", "Automatic Meal Identification", "Casual Blood Glucose Dynamics", "Benchmark"],
   social: {
@@ -24,7 +24,7 @@ const teamMembers = [
   name: "Dvir Zagury-Grynbaum",
   role: "TPM - Casual Blood Glucose Dynamics",
   bio: "BS Mathematical Physics, 2026",
-  image: "/lovable-uploads/4e82b056-5595-44ab-bb36-7f225aaa679e.png",
+  image: `${import.meta.env.BASE_URL}lovable-uploads/4e82b056-5595-44ab-bb36-7f225aaa679e.png`,
   // Updated photo
   subteams: ["Casual Blood Glucose Dynamics"],
   social: {
@@ -38,7 +38,7 @@ const teamMembers = [
   name: "Tony Chan",
   role: "Researcher",
   bio: "BASc, Computer Engineering, 2027",
-  image: "/lovable-uploads/7ff5c649-64d9-449c-9d27-b18b1a4f1be7.png",
+  image: `${import.meta.env.BASE_URL}lovable-uploads/7ff5c649-64d9-449c-9d27-b18b1a4f1be7.png`,
   // Updated photo
   subteams: ["Nocturnal Hypoglycemic Forecasting", "RL Insulin Pump", "Automatic Meal Identification", "Benchmark"],
   social: {
@@ -48,7 +48,7 @@ const teamMembers = [
   name: "Alyssa D'Souza",
   role: "Researcher",
   bio: "BSE, Software Engineering, 2026",
-  image: "/lovable-uploads/d4168fec-eef9-479f-8ff4-6592de5e0adc.png",
+  image: `${import.meta.env.BASE_URL}lovable-uploads/d4168fec-eef9-479f-8ff4-6592de5e0adc.png`,
   // Updated photo
   subteams: ["Nocturnal Hypoglycemic Forecasting", "RL Insulin Pump"],
   social: {
@@ -58,7 +58,7 @@ const teamMembers = [
   name: "Vilohith Rao",
   role: "Researcher",
   bio: "BCS, Computer Science, 2028",
-  image: "/lovable-uploads/57b2e6bf-d11a-4197-88d3-69ac33aca76e.png",
+  image: `${import.meta.env.BASE_URL}lovable-uploads/57b2e6bf-d11a-4197-88d3-69ac33aca76e.png`,
   // Updated photo
   subteams: ["Nocturnal Hypoglycemic Forecasting"],
   social: {
@@ -68,7 +68,7 @@ const teamMembers = [
   name: "Jonathan Gong",
   role: "Researcher",
   bio: "BCS, Computer Science, 2029",
-  image: "/lovable-uploads/5a4d66fb-289a-4555-bf6d-229090c41d49.png",
+  image: `${import.meta.env.BASE_URL}lovable-uploads/5a4d66fb-289a-4555-bf6d-229090c41d49.png`,
   // Updated photo
   subteams: ["Casual Blood Glucose Dynamics"],
   social: {
@@ -78,7 +78,7 @@ const teamMembers = [
   name: "Cristiano Da Silva",
   role: "Researcher",
   bio: "BaSc, Mechanical Engineering, 2029",
-  image: "/lovable-uploads/bcd24ceb-c8e4-4805-aca0-3dfd8ed737e2.png",
+  image: `${import.meta.env.BASE_URL}lovable-uploads/bcd24ceb-c8e4-4805-aca0-3dfd8ed737e2.png`,
   // Updated photo
   subteams: ["Nocturnal Hypoglycemic Forecasting"],
   social: {
@@ -88,7 +88,7 @@ const teamMembers = [
   name: "Nathan Lu",
   role: "Researcher",
   bio: "BASc, Management Engineering, 2028",
-  image: "/lovable-uploads/60087281-eb20-4c56-b6c0-3020f161b574.png",
+  image: `${import.meta.env.BASE_URL}lovable-uploads/60087281-eb20-4c56-b6c0-3020f161b574.png`,
   // Updated photo
   subteams: ["Casual Blood Glucose Dynamics"],
   social: {

@@ -61,7 +61,7 @@ export const ContactSection = () => {
           <div className="md:col-span-2 animate-fade-in">
             <div className="glass-card p-15 px-[60px] py-[40px]">
               <div className="flex justify-center mb-6">
-                <img alt="Glucose Control Research Logo" className="w-100 h-40 object-contain" src="/lovable-uploads/94d02c19-eb94-480c-a81f-06f80c5b0cb8.png" />
+                <img alt="Glucose Control Research Logo" className="w-100 h-40 object-contain" src={`${import.meta.env.BASE_URL}lovable-uploads/94d02c19-eb94-480c-a81f-06f80c5b0cb8.png`} />
               </div>
 
               <h3 className="text-2xl font-bold mb-6 text-center">

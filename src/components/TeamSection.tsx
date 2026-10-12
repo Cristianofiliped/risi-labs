@@ -6,15 +6,15 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 const collaborators = [{
   name: "WAT.ai",
   description: "An organization focused on artificial intelligence research and applications.",
-  image: "/lovable-uploads/d6220671-7885-4d6a-9fcf-bbd8fa6e32d9.png"
+  image: `${import.meta.env.BASE_URL}lovable-uploads/d6220671-7885-4d6a-9fcf-bbd8fa6e32d9.png`
 }, {
   name: "Gluroo Imaginations Inc",
   description: "A specialized healthcare technology company developing innovative solutions for diabetes management.",
-  image: "/lovable-uploads/db93efb5-0c53-4dcf-9fa5-bbaf45544f04.png"
+  image: `${import.meta.env.BASE_URL}lovable-uploads/db93efb5-0c53-4dcf-9fa5-bbaf45544f04.png`
 }, {
   name: "skTime",
   description: "A leading organization specializing in time-series analysis and machine learning applications.",
-  image: "/lovable-uploads/7bb2b192-20ab-4a33-abad-2bb1d966315c.png"
+  image: `${import.meta.env.BASE_URL}lovable-uploads/7bb2b192-20ab-4a33-abad-2bb1d966315c.png`
 }];
 export const TeamSection = () => {
   return <section id="team" className="bg-white py-0">

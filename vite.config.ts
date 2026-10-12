@@ -5,6 +5,9 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  // GitHub Pages serves this site at /risi-labs/, not at the domain root.
+  // The deploy workflow sets GITHUB_PAGES=true; everywhere else (Lovable, local dev) uses "/".
+  base: process.env.GITHUB_PAGES ? "/risi-labs/" : "/",
   server: {
     host: "::",
     port: 8080,
